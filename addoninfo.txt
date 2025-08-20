@@ -1,0 +1,51 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	maps = 
+	[
+		"8_paladins",
+		"4_paladins",
+		"paladins_arena",
+		"4x4_paladins",
+		"paladins_domination",
+	]
+	IsPlayable = 1
+	EnablePickRules = 1
+	map_options = 
+	[
+		{
+			MaxPlayers = 8
+			map = "4x4_paladins"
+		},
+		{
+			MaxPlayers = 4
+			map = "paladins_arena"
+		},
+		{
+			MaxPlayers = 4
+			map = "4_paladins"
+		},
+		{
+			MaxPlayers = 8
+			map = "8_paladins"
+		},
+		{
+			map = "paladins_domination"
+			MaxPlayers = 8
+		},
+	]
+	HideInTools = false
+	IsTemplate = false
+	CheckAFKPlayers = false
+	DefaultMap = "8_paladins"
+	DisableIK = false
+	EventGame = false
+	hero_picker = null
+	HeroGuidesSupported = true
+	ForceDefaultGuide = true
+	MinimalPrecache = false
+	MinPlayers = 1
+	MaxPlayers = 10
+	PenaltiesEnabled = false
+	TeamCount = -1
+	Default_Keys = [  ]
+}
