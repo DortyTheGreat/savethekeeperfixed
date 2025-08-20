@@ -298,7 +298,11 @@ function PrecacheEveryThingFromKV( context )
 	local units_kv = LoadKeyValues("scripts/npc/npc_units_custom.txt")
 	
 	for unitname, unitdata in pairs(units_kv) do
-		PrecacheModel(unitdata["Model"], context)
+		print(unitdata)
+		if type(unitdata) == "table" then -- not exactly sure, but sometimes there could be no model, I guess...
+			PrecacheModel(unitdata["Model"], context)
+			print('precaching ' .. unitdata["Model"] .. " : " .. unitname)
+		end
 		PrecacheUnitByNameSync(unitname, context, nil)
 	end
 end
