@@ -2,8 +2,8 @@
 {
 	maps = 
 	[
-		"8_paladins",
 		"4_paladins",
+		"8_paladins",
 		"paladins_arena",
 		"4x4_paladins",
 		"paladins_domination",

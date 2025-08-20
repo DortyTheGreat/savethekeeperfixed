@@ -9,7 +9,6 @@ if GetMapName() == "8_paladins" then
 elseif GetMapName() == "4_paladins" or true then -- 2025 - eh...
   require("gamemodes/4_paladins")
 elseif GetMapName() == "4x4_paladins" then
-  
   require("gamemodes/4x4_paladins")
 elseif GetMapName() == "paladins_arena" then
   require("gamemodes/paladins_arena")
@@ -294,6 +293,14 @@ function PrecacheEveryThingFromKV( context )
             PrecacheEverythingFromTable( context, kvs)
         end
     end
+	
+	-- This isn't the nicest way to PRECACHE things, but I want to hope that it at least works
+	local units_kv = LoadKeyValues("scripts/npc/npc_units_custom.txt")
+	
+	for unitname, unitdata in pairs(units_kv) do
+		PrecacheModel(unitdata["Model"], context)
+		PrecacheUnitByNameSync(unitname, context, nil)
+	end
 end
 
 function PrecacheEverythingFromTable( context, kvtable)
