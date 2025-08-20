@@ -20,9 +20,9 @@
 		"IsNeutralUnitType"            "0"
 		"AutoAttacksByDefault"         "1"		  
 	
-		"Ability1"							"ve_keeper_multi_attack"
-		"Ability2"							"ve_keeper_unit_weakening"
-		"Ability3"							"ve_keeper_herald_of_life"
+		"Ability1"							"custom_multiattack"
+		//"Ability2"							"ve_keeper_unit_weakening"
+		"Ability3"							"custom_frenzy"
 	
 		// Armor
 		//----------------------------------------------------------------

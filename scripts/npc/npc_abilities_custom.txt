@@ -247,56 +247,21 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"				"ability_datadriven"
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "heroes/hero_keeper/multiattack.lua"
+
+		"MaxLevel"                      "1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"ve_keeper_multi_attack"
+		"AbilityTextureName"            "medusa_split_shot"  // any icon you like
 		
 		"MaxLevel"	"1"
-
-		"precache"
-		{
-			"particle" "particles/econ/items/lina/lina_ti7/lina_spell_light_strike_array_ti7_gold_impact_sparks.vpcf"
-			"soundfile" "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts" 
-		}
 		
 		"AbilitySpecial"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
 				"radius"						"300"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
 				"targets"						"2"
-			}
 		}
 		
-		// Data driven
-		//-------------------------------------------------------------------------------------------------------------
-		"Modifiers"
-		{
-			"modifier_ve_keeper_multi_attack_buff"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"IsPurgable"		"0"				
-				"OnAttack"
-				{
-					
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/hero_keeper/multiattack.lua"
-						"Function"		"MultiAttack"
-						"Target"		"TARGET"
-						"EffectName"	"particles/econ/items/lina/lina_ti7/lina_spell_light_strike_array_ti7_gold_impact_sparks.vpcf"
-						"SoundName"	"Hero_Dazzle.Poison_Tick"
-						"attacker"		"ATTACKER"
-					}
-				}
-			}
-		}
 	}
 	"ve_courier_invulnerable"
 	{
@@ -623,6 +588,30 @@
 			}
 		}
 	}
+	
+	"custom_frenzy"
+  {
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/custom_frenzy.lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+
+    "AbilityTextureName"            "herald_of_life"   // icon you like
+    "MaxLevel"                      "1"
+    "FightRecapLevel"               "1"
+
+    "AbilityCooldown"               "600"
+    "AbilityManaCost"               "1000"
+    "AbilityDuration"               "15.0"
+
+    "AbilityValues"
+    {
+
+        "bonus_attack_speed"        "350"
+        "bonus_damage"              "350"
+      
+    }
+  }
 	
 	"ve_antimage_mana_void"
 	{
@@ -1977,18 +1966,10 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{			
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"0 0 0 0 0 1 2"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"radius"					"900"
-			}
 		}
 	}
 	
@@ -2852,4 +2833,26 @@
 			}
 		}
 	}
+	
+	"custom_multiattack"
+  {
+    // Passive ability
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/custom_multiattack.lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+    // Tuning
+    "AbilityTextureName"            "ve_keeper_multi_attack"  // any icon you like
+
+    "MaxLevel"                      "1"
+    "AbilityValues"
+    {
+
+        "extra_attacks"             "2"        // how many EXTRA targets per swing
+        "search_radius"             "300"  // how far to look for extra targets
+        "damage_pct"                "100"     // %damage on extra hits
+        "internal_cooldown"         "0.0"  // seconds between multiattack procs (0 = every attack)
+      
+    }
+  }
 }

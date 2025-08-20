@@ -1,30 +1,4 @@
-function MultiAttack(keys)
-	local caster = keys.caster
-	local attacker = keys.attacker
-	local target = keys.target
-	local ability = keys.ability
-	local max_targets = ability:GetSpecialValueFor('targets')
-	local radius = ability:GetSpecialValueFor('radius')
-	if attacker == caster and ability:IsCooldownReady() and not ability.IsAttacking then
-		local all_targets = FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false)
-		ability.IsAttacking = true
-		for _,unit in pairs(all_targets) do
-			if unit ~= target then
-				caster:PerformAttack(unit, false, true, true, false, true, false, false)
-				max_targets = max_targets - 1
-				EmitSoundOn(keys.SoundName, unit)
-				--ParticleManager:CreateParticle(keys.EffectName, PATTACH_POINT, unit)
-			end
-			if max_targets == 0 then break end
-		end
-		ability.IsAttacking = false
-	end
-end
-
-
-
---scripts/vscripts/abilities/custom_multiattack.lua
-LinkLuaModifier("modifier_custom_multiattack", "heroes/hero_keeper/multiattack.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_custom_multiattack", "abilities/custom_multiattack.lua", LUA_MODIFIER_MOTION_NONE)
 
 custom_multiattack = class({})
 
@@ -35,7 +9,6 @@ end
 
 
 
---scripts/vscripts/modifiers/modifier_custom_multiattack.lua
 modifier_custom_multiattack = class({})
 
 function modifier_custom_multiattack:IsHidden() return true end
@@ -78,7 +51,6 @@ function modifier_custom_multiattack:GetModifierDamageOutgoing_Percentage(params
 end
 
 function modifier_custom_multiattack:OnAttack(keys)
-	print('onattack')
     if not IsServer() then return end
     if keys.attacker ~= self.parent then return end
     if not self.ability or self.ability:IsNull() then return end
@@ -88,6 +60,12 @@ function modifier_custom_multiattack:OnAttack(keys)
 
     -- prevent recursion: ignore attacks we ourselves created
     if self.in_bonus_attack then return end
+
+    -- internal cooldown (optional)
+    local time_now = GameRules:GetGameTime()
+    if time_now - (self.last_proc_time or -9999) < (self.icd or 0) then
+        return
+    end
 
     local original_target = keys.target
     if not original_target or original_target:IsNull() or not original_target:IsAlive() then return end
