@@ -75,7 +75,7 @@ function OnEndTouch(trigger)
 		Timers:CreateTimer(0.001, function()
 			if isTouched == false then
 				--trigger.activator:SetAbsOrigin(unitpoint)
-				FindClearSpaceForUnit(trigger.activator, PlayerResource:GetRespawnPosition(trigger.activator:GetTeamNumber()), true)
+				FindClearSpaceForUnit(trigger.activator, unitpoint, true)
 				trigger.activator:InterruptMotionControllers(true)
 				print("Teleport Debug has called!")
 			end
