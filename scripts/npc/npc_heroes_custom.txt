@@ -13,6 +13,12 @@
 		"AttributeAgilityGain"		"2.100000"
 	}
 	
+	"npc_dota_hero_chen"
+	{
+		"override_hero"			"npc_dota_hero_chen"
+		"Ability3"		""
+	}
+	
 	"npc_ve_templar_assassin"
 	{
 		"override_hero"				"npc_dota_hero_templar_assassin"			// Hero to override

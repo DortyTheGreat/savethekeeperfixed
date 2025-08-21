@@ -257,9 +257,12 @@ function GameMode:OnGameInProgress()
 
 	Timers:CreateTimer(0.1, function()
 		local allHeroes = HeroList:GetAllHeroes()
+		local processedOwnerIDs = {} -- this hotfixes meepo and other multieroed calls
 		for _,hero in pairs(allHeroes) do
-			if not hero:IsIllusion() then
-				local ownerid = hero:GetPlayerOwnerID()
+			local ownerid = hero:GetPlayerOwnerID()
+			if not hero:IsIllusion() and not processedOwnerIDs[ownerid] then
+				processedOwnerIDs[ownerid] = true
+				
 				--if ownerid and PlayerResource:GetPlayer(ownerid) and PlayerResource:IsValidPlayer(ownerid) and PlayerResource:HasSelectedHero( ownerid ) then
 					local curunitlist = CDOTA_PlayerResource:GetUnitlist(ownerid)
 					local team = hero:GetTeam()
@@ -296,9 +299,11 @@ function GameMode:OnGameInProgress()
 	end)
 	Timers:CreateTimer(0.1, function()
 		local allHeroes = HeroList:GetAllHeroes()
+		local processedOwnerIDs = {} -- this hotfixes meepo and other multieroed calls
 		for _,hero in pairs(allHeroes) do
-			if not hero:IsIllusion() then
 			local ownerid = hero:GetPlayerOwnerID()
+			if not hero:IsIllusion() and not processedOwnerIDs[ownerid] then
+				processedOwnerIDs[ownerid] = true
 				if GameMode:game_IsValidPlayer(ownerid, false) then
 					local team = hero:GetTeam()
 					local myincome = CDOTA_PlayerResource:GetIncome(ownerid)

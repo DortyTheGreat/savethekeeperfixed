@@ -3,6 +3,17 @@ require('internal/util')
 require('gamemode')
 require('stk_api')
 
+-- lib function, wrap it into some file later
+function CDOTA_PlayerResource:GetPlayerIDs()
+	local players = {}
+	for i=0, DOTA_MAX_TEAM_PLAYERS do
+		if PlayerResource:IsValidPlayerID(i) then
+			table.insert(players, i)
+		end
+	end
+	return players
+end
+
 -- This is a detailed example of many of the containers.lua possibilities, but only activates if you use the provided "playground" map
 if GetMapName() == "8_paladins" then
   require("gamemodes/8_paladins")
@@ -15,6 +26,9 @@ elseif GetMapName() == "paladins_arena" then
 elseif GetMapName() == "paladins_domination" then
   require("gamemodes/paladins_domination")
 end
+
+
+
 
 function GameMode:OrderFilter( filterTable )
   local units = filterTable["units"]

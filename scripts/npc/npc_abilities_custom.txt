@@ -2659,6 +2659,9 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"		
 		"MaxLevel" 				"3"
+		
+		"LevelsBetweenUpgrades" 		 "7"
+		"RequiredLevel"          "7"
 		"AbilityTextureName"			"wisp_element_essence"
 
 		// Precache
@@ -2676,11 +2679,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			
 				"regeneration"			"30 50 100"
-			
 				"armor"			"5 10 15"
-			
 		}
 		"Modifiers"
 		{
