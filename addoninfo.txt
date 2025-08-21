@@ -36,7 +36,7 @@
 	HideInTools = false
 	IsTemplate = false
 	CheckAFKPlayers = false
-	DefaultMap = "8_paladins"
+	DefaultMap = "4_paladins"
 	DisableIK = false
 	EventGame = false
 	hero_picker = null

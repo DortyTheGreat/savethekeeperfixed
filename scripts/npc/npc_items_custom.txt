@@ -1,6 +1,31 @@
 "DOTAAbilities"
 {
 	
+	"item_spawn_madstone"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"                    "items/item_spawn_madstone"
+		"AbilityTextureName"	        "custom/madstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+
+		"ItemCost"						"100"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"777"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"3.0"			  
+		"ItemInitialStockTime"			"3.0"  
+		"BonusDelayedStockCount"		"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+	}
+	
 	"item_greater_salve"
 	{
 		"ID"							"2001"
@@ -64,23 +89,12 @@
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"buff_duration"			"10"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"total_hp"				"1500"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"hp_per_tick"			"150"  // %total_mana / %buff_duration
-			}
+			
 		}
 	}
    
@@ -112,18 +126,14 @@
 		}
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"evasion_bonus"					"20" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -186,18 +196,14 @@
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"damage_bonus"					"45" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -259,18 +265,13 @@
 		}
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"speed_bonus"					"55" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -333,18 +334,12 @@
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"regen_bonus"					"18" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -407,18 +402,13 @@
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+	
 				"armor_bonus"					"15" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -481,18 +471,13 @@
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+
 				"vampirism_bonus"					"10" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -590,43 +575,23 @@
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial" 
+		"AbilityValues" 
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+
 				"evasion_bonus"					"20" 
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+
 				"damage_bonus"					"45" 
-			}
-			"03"
-			{
-				"var_type"						"FIELD_INTEGER"
+	
 				"speed_bonus"					"55" 
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
+		
 				"regen_bonus"					"18" 
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"armor_bonus"					"15" 
-			}
-			"06"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"vampirism_bonus"					"10" 
-			}
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"25000" 
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -735,58 +700,29 @@
 		
 		// Special 
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"damage"				"22"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_health"			"250"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_regen"			"8"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"attribute"				"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_int_tooltip"		"12"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
+			
 				"armor"					"11"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"damage_block"			"70"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
+			
 				"duration"				"8.0"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"return_damage"			"250"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_int"				"22"
-			}
+			
 		}
 
 		"precache"
@@ -917,9 +853,10 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"                  "0"   
+		"ItemCost"                 	    "0"   
 		"ItemDroppable"                 "1"
 		"ItemSellable"                  "1"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
 		"ItemShareability"            "ITEM_FULLY_SHAREABLE"            
 		"SideShop"                  "1"      
 
@@ -928,18 +865,10 @@
 		
 		// Special 
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"attackspeed"			"50"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"gold"			"2"
-			}
 		}
 		"Modifiers"
 		{
@@ -1013,18 +942,10 @@
 		
 		// Special 
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"attackspeed"			"170"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"gold"			"3"
-			}
 		}
 		"Modifiers"
 		{
@@ -1100,38 +1021,21 @@
 		
 		// Special 
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+
 				"mdamage"				"100"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+
 				"red"				"-8"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+
 				"redup"				"-8"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+
 				"chance_redup"				"20"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
+
 				"duration"				"4.0"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
+
 				"duration_redup"				"4.0"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -1250,54 +1154,18 @@
 		"ItemSellable"                  "1"
 		"ItemShareability"            "ITEM_FULLY_SHAREABLE"            
 		"SideShop"                  "1"      
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"            "FIELD_INTEGER"
 				"health"         "500"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"attribute"				"7"
-			}
-			"03"
-			{
-				"var_type"            "FIELD_INTEGER"
 				"armor"         "10"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"regen"			"7"
-			}
-			"05"
-			{
-				"var_type"            "FIELD_INTEGER"
 				"manaregen"         "2"
-			}
-
-			"06"
-			{
-				"var_type"            "FIELD_INTEGER"
 				"armor_aura"         "5"
-			}
-			"07"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"regen_aura"			"5"
-			}
-			"08"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"manaregen_aura"			"3"
-			}
-			"09"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"radius"		"1100"
-			}
+			
 		}
 		"precache"
 		{
@@ -1428,48 +1296,25 @@
 		
 		// Special 
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"mdamage"				"15"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"spell_amp"			"28"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"attribute"				"35"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
+			
 				"cast_range_bonus"		"350"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_health_regen"				"8"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"manaregen"				"175"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"attackspeed"			"15"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_mana"			"350"
-			}
+			
 		}
 		"OnEquip"
 		{
@@ -1540,13 +1385,9 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
     	
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_damage"			"760"
-			}
 		}
 	}
 
@@ -1588,54 +1429,27 @@
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_health"							"325"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_mana"							"350"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_all"							"25"
-			}
-
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"cooldown_proc"							"30"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"slow_percentage"							"-45"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"attack_speed_slow"							"-45"
-			}
-			"07"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"damage"							"10"
-			}
-			"08"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"duration"							"3"
-			}
-			"09"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"damage_per_seconds_tooltip"		"50"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -1714,23 +1528,16 @@
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_health"							"100"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_mana"							"100"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
+			
 				"cooldown_proc"							"10"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -1795,53 +1602,27 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_duration"							"20"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_speed"							"150"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_damage"							"150"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_armor"							"20"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_min_health"					"30"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_speed"							"55"
-			}
-			"07"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_damage"							"60"
-			}
-			"08"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_armor"							"10"
-			}
-			"09"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_regen"							"7"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -1951,28 +1732,17 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_speed"							"-45"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_damage"							"-35"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_armor"							"-20"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"radius"							"900"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -2054,43 +1824,24 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_speed"							"-35"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_damage"							"-15"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"buff_armor"							"-10"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"radius"							"900"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"damage"							"150"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
+			
 				"movespeed"							"-50"
-			}
-			"07"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"bonus_damage_caster"				"100"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -2190,23 +1941,11 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"	"FIELD_FLOAT"
 				"duration"	"30.0"
-			}
-			"02"
-			{
-				"var_type"	"FIELD_INTEGER"
 				"attackspeed"	"60"
-			}
-			"03"
-			{
-				"var_type"	"FIELD_INTEGER"
 				"radius"	"1000"
-			}
 		}
 		"OnSpellStart"
 		{

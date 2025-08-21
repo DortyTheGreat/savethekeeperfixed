@@ -14,33 +14,19 @@
 		
 		"MaxLevel"	"1"
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"proc_chance"					"16 19 22 25"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"2000"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"speed_bonus"					"-50"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"damage_bonus"					"-50"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"armor_bonus"					"-10"
-			}
+			
 		}
 		
 		// Data driven
@@ -136,33 +122,19 @@
 		
 		"MaxLevel"	"1"
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"proc_chance"					"16 19 22 25"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"25000"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"speed_bonus"					"50"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"damage_bonus"					"150"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"armor_bonus"					"20"
-			}
+			
 		}
 		"precache"
 		{
@@ -215,18 +187,13 @@
 		
 		"MaxLevel"	"1"
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"damage_reduce"					"30"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"damage_taken"					"30"
-			}
+			
 		}
 		
 		// Data driven
@@ -252,11 +219,11 @@
 
 		"MaxLevel"                      "1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"            "medusa_split_shot"  // any icon you like
+		"AbilityTextureName"            "ve_keeper_multi_attack"  // any icon you like
 		
 		"MaxLevel"	"1"
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 				"radius"						"300"
 				"targets"						"2"
@@ -305,18 +272,13 @@
 		"AbilityTextureName"     	"silencer_bloodthorn"   
 		"RequiredLevel"          "0"
 		"LevelsBetweenUpgrades"  "2"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"radius"					"300"
-			}
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"duration"					"10.0"
-			}
+			
 		}
 		"OnSpellStart"
 		{
@@ -369,13 +331,11 @@
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
 		}
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"proc_chance"					"16 19 22 25"
-			}
+			
+			"proc_chance"					"16 19 22 25"
+			
 		}
 		
 		// Data driven
@@ -448,23 +408,15 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"speed_bonus"				"40 60 80 100"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"agi_bonus"					"15 20 25 30"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"duration"					"10.0 12.0 14.0 16.0"
-			}
+			
 		}
 	
 		"precache"
@@ -531,23 +483,15 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"speed_bonus"				"347"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"damage_bonus"					"347"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"duration"					"15.0"
-			}
+			
 		}
 	
 		"precache"
@@ -651,33 +595,19 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_FLOAT"
+			
 				"mana_void_damage_per_mana"			"1.0 1.2 1.4"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"mana_void_ministun"				"2.0"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"mana_void_aoe_radius"				"400 500 600"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"mana_void_mana_burn_pct"			"30 35 40"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"secondary_mana_scepter"			"100"
-			}
+			
 		}
 
 		"OnAbilityPhaseStart"
@@ -756,13 +686,11 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"activate_chance"			"10 11 12"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -800,13 +728,11 @@
 			"particle" "particles/econ/wards/f2p/f2p_ward/ward_true_sight_true_sight.vpcf"
 		}
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"show_radius"					"800"
-			}
+			
 		}
 		
 		// Data driven
@@ -876,28 +802,17 @@
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
 		}
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"slow_duration"					"0.5"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
+			
 				"proc_chance"					"10"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"knockback_dist"			"5 7 9 11 13 15 17"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"knockback_duration"			"0.025 0.05 0.075 0.1 0.125 0.15 0.175"
-			}
+			
 		}
 		
 		// Data driven
@@ -977,18 +892,13 @@
 		"AbilityTextureName"     	"spawn_spearmans"   
 		"RequiredLevel"          "0"
 		"LevelsBetweenUpgrades"  "2"
- 		"AbilitySpecial"
+ 		"AbilityValues"
 		{
-			"01"
-			{ 
-				"var_type"					"FIELD_INTEGER"
+			
 				"count"						"3"
-			}	
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"unitlimit"					"100"
-			}
+			
 		} 
 		"OnSpellStart"
 		{
@@ -1020,14 +930,9 @@
 		"AbilityTextureName"     	"heal"   
 		"RequiredLevel"          "0"
 		"LevelsBetweenUpgrades"  "2"
- 		"AbilitySpecial"
+ 		"AbilityValues"
 		{
-
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
 				"amount"					"25 40 55 70 85 150 300"
-			}
 		} 
 	
 		"precache"
@@ -1096,6 +1001,33 @@
 			}
 		}
 	}
+	
+	"custom_heal_ability"
+	{
+		"BaseClass"             "ability_lua"
+		"ScriptFile"            "abilities/custom_heal_ability.lua"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"SpellImmunityType"     "SPELL_IMMUNITY_ALLIES_YES"
+		"FightRecapLevel"       "1"
+
+		"AbilityTextureName"    "heal" // Icon
+
+		"MaxLevel" "7"
+
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCooldown"				"2.5 2.5 2.5 2.0 2.0 1.5 1.5"
+		"AbilityManaCost"				"5"
+		
+		"AbilityValues"
+		{
+				"heal_amount"   "25 40 55 70 85 150 300"
+		}
+		
+		"precache" "particles/items3_fx/warmage_recipient.vpcf"
+	}
 
 	// ALCHEMIST //
 	// Greevil's Greed
@@ -1104,28 +1036,17 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"duration"				"35"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_gold"			"2"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_bonus_gold"		"1"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_gold_cap"		"16 20 24 28"
-			}
+			
 		}
 	}
 
@@ -1142,34 +1063,20 @@
 	
 	"bounty_hunter_shuriken_toss"
 	{
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bonus_damage"			"200 325 450 575"
 				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_2"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"speed"					"1000 1000 1000 1000"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"bounce_aoe"			"1200"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"ministun"			"0.7"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"scepter_ministun"			"1.75"
-			}
+			
 		}
 	}
 
@@ -2256,23 +2163,15 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
+			
 				"duration"			"10 12 14"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
+			
 				"strength_bonus"		"50 75 100"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
+			
 				"move_bonus"		"50000"
-			}
+			
 		}
 	
 		"precache"
@@ -2498,18 +2397,13 @@
 		"AbilityCooldown"    "0"
 		"AbilityManaCost"    "0"
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type" "FIELD_INTEGER"
+			
 				"Range" "200"
-			}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
+			
 				"damage" "25"
-			}
+			
 		}
 
 		"Modifiers"
@@ -2578,23 +2472,15 @@
 		"LevelsBetweenUpgrades"  "1"	
 		"MaxLevel" "1"
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type" "FIELD_INTEGER"
+			
 				"Range" "800"
-			}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
+			
 				"damage" "25"
-			}
-			"03"
-			{
-				"var_type"	"FIELD_INTEGER"
+			
 				"speed_reduce"	"-120"
-			}
+			
 		}
 
 		"Modifiers"
@@ -2689,38 +2575,21 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"start_radius"			"150 150 150 150 150"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"end_radius"			"250 250 250 250 250"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"range"					"650 650 650 650 650"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"speed"					"1050"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"dmg_reduction_pct"		"-60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"reduction_duration"	"11.0"
-			}
+			
 		}
 		
 		"OnSpellStart"
@@ -2805,18 +2674,13 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"regeneration"			"30 50 100"
-			}
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
+			
 				"armor"			"5 10 15"
-			}
+			
 		}
 		"Modifiers"
 		{

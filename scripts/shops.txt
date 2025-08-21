@@ -18,6 +18,7 @@
 		"item"		"item_bottle"
 		"item"		"item_aghanims_shard"
 		"item"		"item_keeper_upgrade"
+		"item"		"item_spawn_madstone"
 	}
 
 	"attributes"

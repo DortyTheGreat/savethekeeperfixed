@@ -20,9 +20,9 @@
 		"IsNeutralUnitType"            "0"
 		"AutoAttacksByDefault"         "1"		  
 	
-		"Ability1"							"custom_multiattack"
-		//"Ability2"							"ve_keeper_unit_weakening"
-		"Ability3"							"custom_frenzy"
+		"Ability1"							"custom_multiattack" //   ve_keeper_multi_attack
+		"Ability2"							"ve_keeper_unit_weakening"
+		"Ability3"							"ve_keeper_herald_of_life" //  custom_frenzy
 	
 		// Armor
 		//----------------------------------------------------------------
@@ -3214,7 +3214,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"               "unit_buffer_heal"         // Ability 1
+		"Ability1"               "unit_buffer_heal"         // Ability 1  custom_heal_ability
 		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
@@ -3311,7 +3311,7 @@
 		}
 	}	
 
-	// SPECIAL 1: LUNA
+	// SPECIAL 1: PHANTOM ASSASIN
 	"basic_unit_special_1"
 	{
 		// General

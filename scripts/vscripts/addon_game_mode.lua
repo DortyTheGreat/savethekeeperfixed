@@ -53,6 +53,7 @@ function Precache( context )
 	PrecacheUnitByNameSync("npc_dota_hero_zuus", context)
 	PrecacheUnitByNameSync("npc_dota_hero_chen", context)
 	PrecacheUnitByNameSync("npc_dota_hero_silencer", context)
+	
 end
 
 function Activate()
@@ -300,8 +301,13 @@ function PrecacheEveryThingFromKV( context )
 	for unitname, unitdata in pairs(units_kv) do
 		print(unitdata)
 		if type(unitdata) == "table" then -- not exactly sure, but sometimes there could be no model, I guess...
-			PrecacheModel(unitdata["Model"], context)
-			print('precaching ' .. unitdata["Model"] .. " : " .. unitname)
+			
+			if unitdata["Model"] then
+				print('precaching ' .. unitdata["Model"] .. " : " .. unitname)
+				PrecacheModel(unitdata["Model"], context)
+			else
+				print('precaching [NO MODEL] : ' .. unitname)
+			end
 		end
 		PrecacheUnitByNameSync(unitname, context, nil)
 	end
