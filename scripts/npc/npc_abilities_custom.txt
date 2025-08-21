@@ -932,7 +932,7 @@
 		"LevelsBetweenUpgrades"  "2"
  		"AbilityValues"
 		{
-				"amount"					"25 40 55 70 85 150 300"
+				"amount"					"15 25 40 50 75 100 200"
 		} 
 	
 		"precache"
