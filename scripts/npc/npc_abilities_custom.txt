@@ -681,8 +681,11 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"		
 		"MaxLevel" 				"3"
+		
+		"LevelsBetweenUpgrades" 		 "7"
+		"RequiredLevel"          "7"
 		"AbilityTextureName"			"commander_call"
-
+		
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
@@ -699,7 +702,7 @@
 		"AbilityValues"
 		{
 			
-				"activate_chance"			"10 11 12"
+				"activate_chance"			"5 10 15"
 			
 		}
 		"Modifiers"

@@ -22,10 +22,17 @@ end
 
 function GameMode:OnPlayerVoteReady(event)
 	TYPE_VOTES[event.PlayerID] = event.type
-	CustomGameEventManager:Send_ServerToPlayer( PlayerResource:GetPlayer(event.PlayerID), "vote_selected", {type = event.type, playerId = event.PlayerID} )
-	if event.type == 0 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='green'>".. "Быстрый" .."</font>", 0, 0)
-	elseif event.type == 1 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='gold'>".. "Классический" .."</font>", 0, 0)
-	elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='red'>".. "Долгий" .."</font>", 0, 0) end
+	
+	local fastCount, classicCount, longCount = countVoteTypes()
+	
+	CustomGameEventManager:Send_ServerToAllClients("vote_load", {fastCount = fastCount, classicCount = classicCount, longCount = longCount})
+	
+	local total_count_str = " (<font color='green'>".. fastCount .."</font> " .. "<font color='gold'>".. classicCount .."</font> " .. "<font color='purple'>".. longCount .."</font>)"
+	
+	if event.type == 0 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='green'>".. "Быстрый" .."</font>" .. total_count_str, 0, 0)
+	elseif event.type == 1 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='gold'>".. "Классический" .."</font>" .. total_count_str, 0, 0)
+	--elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='red'>".. "Долгий" .."</font>" .. total_count_str, 0, 0) end
+	elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='purple'>".. "Modern" .."</font>" .. total_count_str, 0, 0) end
 end
 
 
@@ -56,48 +63,50 @@ function GameMode:OnFirstPlayerLoaded()
 	CustomGameEventManager:RegisterListener( "player_vote_ready", Dynamic_Wrap(GameMode, "OnPlayerVoteReady") )	
 end
 
+require("gamemodes/wavemodes")
+
+
+-- it seems that game_IsValidPlayer check doesn't work properly during loading, so I removed that check. Hope that there are no abuses
+function countVoteTypes()
+    local fastCount = 0
+    local classicCount = 0
+    local longCount = 0
+
+    for playerID = 0, 24-1 do
+        --if GameMode:game_IsValidPlayer(playerID, false) then
+            if TYPE_VOTES[playerID] == 0 then
+                fastCount = fastCount + 1
+            elseif TYPE_VOTES[playerID] == 1 then
+                classicCount = classicCount + 1
+            elseif TYPE_VOTES[playerID] == 2 then
+                longCount = longCount + 1
+            end
+        --end
+    end
+
+    return fastCount, classicCount, longCount
+end
+
 function GameMode:ChangeSettings(TYPE_VOTES)
 
-	fastCount = 0;
-	classicCount = 0;
-	longCount = 0;
-
-	for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
-		if GameMode:game_IsValidPlayer(playerID, false) then
-			if TYPE_VOTES[playerID] == 0 then fastCount = fastCount + 1
-			elseif TYPE_VOTES[playerID] == 1 then classicCount = classicCount + 1
-			elseif TYPE_VOTES[playerID] == 2 then longCount = longCount + 1
-			end
-		end
-	end
+	local fastCount, classicCount, longCount = countVoteTypes()
+	
 	if fastCount == 0 and classicCount == 0 and longCount == 0 then 
-		ROUND_DELAY = 30.0 				-- время между каждым раундом (волной).
-		INCOME_COUNT = 10				-- коэффициент дохода (во сколько раз будет увеличен базовый доход от покупки юнитов).
-		INCOME_DELAY = 15.0				-- время между получением дохода.
-		BONUS_FOOD = 5					-- количество еды, даваемое за стадию (BONUS_FOOD умножается на GAME_STATE_NUMBER и прибавляется к текущему максимальному значению еды игрока).
+		init_classic_wavemode()
 	else
 		if fastCount >= classicCount and fastCount >= longCount then
-			ROUND_DELAY = 10.0 				-- время между каждым раундом (волной).
-			INCOME_COUNT = 30				-- коэффициент дохода (во сколько раз будет увеличен базовый доход от покупки юнитов).
-			INCOME_DELAY = 10.0				-- время между получением дохода.
-			BONUS_FOOD = 15					-- количество еды, даваемое за стадию (BONUS_FOOD умножается на GAME_STATE_NUMBER и прибавляется к текущему максимальному значению еды игрока).
+			init_fast_wavemode()
 		elseif classicCount >= fastCount and classicCount >= longCount then
-			ROUND_DELAY = 30.0 				-- время между каждым раундом (волной).
-			INCOME_COUNT = 10				-- коэффициент дохода (во сколько раз будет увеличен базовый доход от покупки юнитов).
-			INCOME_DELAY = 15.0				-- время между получением дохода.
-			BONUS_FOOD = 5					-- количество еды, даваемое за стадию (BONUS_FOOD умножается на GAME_STATE_NUMBER и прибавляется к текущему максимальному значению еды игрока).
+			init_classic_wavemode()
 		elseif longCount >= fastCount and longCount >= classicCount then
-			ROUND_DELAY = 45.0 				-- время между каждым раундом (волной).
-			INCOME_COUNT = 15				-- коэффициент дохода (во сколько раз будет увеличен базовый доход от покупки юнитов).
-			INCOME_DELAY = 45.0				-- время между получением дохода.
-			BONUS_FOOD = 5					-- количество еды, даваемое за стадию (BONUS_FOOD умножается на GAME_STATE_NUMBER и прибавляется к текущему максимальному значению еды игрока).
+			init_modern_wavemode()
 		end	
 	end
 end
 
 function GameMode:OnGameRulesStateChange(keys)
   local newState = GameRules:State_Get()
-  if newState == DOTA_GAMERULES_STATE_STRATEGY_TIME then
+  if newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
   	GameMode:ChangeSettings(TYPE_VOTES)	
 	for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
 		--if PlayerResource:GetPlayer(playerID) ~= nil and PlayerResource:IsValidPlayer(playerID) then

@@ -2,7 +2,7 @@
 require('internal/util')
 require('gamemode')
 require('stk_api')
-
+require('arc_warden_hotfix')
 -- lib function, wrap it into some file later
 function CDOTA_PlayerResource:GetPlayerIDs()
 	local players = {}
