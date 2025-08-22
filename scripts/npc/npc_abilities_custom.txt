@@ -3,7 +3,17 @@
 "DOTAAbilities"
 {
   "Version"   "1"
-
+	
+	"keeper_not_upgraded_ui"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"keeper_not_upgraded"
+		"MaxLevel"	"1"
+	}
+	
 	"ve_keeper_unit_weakening"
 	{
 		// General

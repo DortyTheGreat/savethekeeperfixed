@@ -23,6 +23,7 @@
 		"Ability1"							"custom_multiattack" //   ve_keeper_multi_attack
 		"Ability2"							"ve_keeper_unit_weakening"
 		"Ability3"							"ve_keeper_herald_of_life" //  custom_frenzy
+		"Ability4"							"keeper_not_upgraded_ui" //  custom_frenzy
 	
 		// Armor
 		//----------------------------------------------------------------

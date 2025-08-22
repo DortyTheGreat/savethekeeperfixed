@@ -14,7 +14,14 @@ function UpgradeKeeper(keys)
 			keep:SetBaseDamageMin(220)
 			keep:SetBaseDamageMax(229)	
 			keep:SetHasInventory(true)
-
+			
+			local ability = keep:GetAbilityByIndex(3)
+			if ability then
+				if ability:GetAbilityName() == "keeper_not_upgraded_ui" then 
+					keep:RemoveAbility(ability:GetAbilityName()) -- remove ui ability 
+				end
+			end
+			
 			local ability = keep:AddAbility("ve_keeper_unit_buff")
 			ability:SetLevel(1)
 			CustomGameEventManager:Send_ServerToPlayer( PlayerResource:GetPlayer(caster:GetPlayerID()), "reverse_available", {})
