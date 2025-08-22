@@ -26,6 +26,68 @@
 		"IsTempestDoubleClonable"		"0"
 	}
 	
+	"item_wisdom_scroll_1"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"                    "items/item_wisdom_scroll_1"
+		"AbilityTextureName"	        "scroll_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+
+		"ItemCost"						"1"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStockTime"					"60.0"			  
+		"ItemInitialStockTime"			"0.0"  
+		"BonusDelayedStockCount"		"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+	}
+	
+	"item_wisdom_scroll_2"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"                    "items/item_wisdom_scroll_1"
+		"AbilityTextureName"	        "scroll_2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+
+		"ItemCost"						"1"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStockTime"					"60.0"			  
+		"ItemInitialStockTime"			"0.0"  
+		"BonusDelayedStockCount"		"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+	}
+	
+	"item_wisdom_scroll_3"
+	{
+		"BaseClass"						"item_wisdom_scroll_1"
+		"AbilityTextureName"	        "scroll_3"
+	}
+	
+	"item_wisdom_scroll_4"
+	{
+		"BaseClass"						"item_wisdom_scroll_1"
+		"AbilityTextureName"	        "scroll_4"
+	}
+	
 	"item_greater_salve"
 	{
 		"ID"							"2001"
