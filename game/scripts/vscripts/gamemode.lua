@@ -138,6 +138,9 @@ function GameMode:InitGameMode()
   Msg('[BAREBONES] Done loading Barebones gamemode!\n\n')
 end
 
+
+
+
 -- This is an example console command
 function GameMode:ExampleConsoleCommand()
   print( '******* Example Console Command ***************' )

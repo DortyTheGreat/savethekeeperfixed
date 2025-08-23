@@ -4,6 +4,25 @@
 {
   "Version"   "1"
 	
+	"ability_unmovable"
+	{
+		"BaseClass"         "ability_lua"
+		"ScriptFile"        "abilities/ability_unmovable.lua"
+		"AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ability_specal_aura"
+	{
+		"BaseClass"         "ability_lua"
+		"ScriptFile"        "abilities/ability_specal_aura.lua"
+		"AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_invoker/invoker_ambient_light.vpcf"
+		}
+	}
+
 	"keeper_not_upgraded_ui"
 	{
 		// General
@@ -1335,39 +1354,21 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"instances"					"3 5 7 9"
-				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"damage_threshold"			"5 5 5 5"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"duration"					"17.0 17.0 17.0 17.0"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"heal_threshold"			"40 50 60 70"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"bonus_damage"				"20 40 60 80"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"bonus_attack_speed"				"15 30 45 60"
-			}
+			
 		}
 		
 		"OnSpellStart"
@@ -1463,23 +1464,15 @@
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"speed_gain"				"5 7 9 11"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"speed_loss"				"-5 -7 -9 -11"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"duration"				"7 14 22 30"
-			}
+			
 		}
 		
 		
@@ -1633,24 +1626,15 @@
 			"particle"	"particles/econ/items/monkey_king/arcana/water/mk_spring_arcana_water_endcap.vpcf"
 		}
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"pounce_radius"			"200"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
+			
 				"leash_duration"		"3.5"
-				"LinkedSpecialBonus"	"special_bonus_unique_slark"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
+			
 				"attack_delay"			"0.4 0.35 0.3 0.25"
-			}
+			
 		}
 
 		"OnSpellStart"
@@ -1761,33 +1745,19 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"radius"				"700 700 700"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"damage"				"45 90 180"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"heal"				"150 275 400"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"duration"				"7.0"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+			
 				"wounds_duration"		"2.0"
-			}
+			
 		}
 	
 		"OnSpellStart"
@@ -2014,18 +1984,13 @@
 		"MaxLevel" "7"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"bonus_health_regen"		"1 2 3 4 5 6 7"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+			
 				"bonus_armor"				"1 2 3 4 5 6 7"
-			}
+			
 		}
 		"Modifiers"
 		{
@@ -2059,7 +2024,7 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{

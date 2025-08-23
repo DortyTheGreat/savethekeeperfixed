@@ -102,6 +102,7 @@ function GameMode:_InitGameMode()
   ListenToGameEvent('player_connect', Dynamic_Wrap(GameMode, 'PlayerConnect'), self)
   ListenToGameEvent('dota_player_used_ability', Dynamic_Wrap(GameMode, 'OnAbilityUsed'), self)
   ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(GameMode, '_OnGameRulesStateChange'), self)
+  ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameStateChanged_aura"), self)
   ListenToGameEvent('npc_spawned', Dynamic_Wrap(GameMode, '_OnNPCSpawned'), self)
   ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
   ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(GameMode, 'OnTeamKillCredit'), self)
@@ -116,6 +117,7 @@ function GameMode:_InitGameMode()
 
   ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, 'OnPlayerChat'), self)
   
+
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 
   --ListenToGameEvent('player_spawn', Dynamic_Wrap(GameMode, 'OnPlayerSpawn'), self)
@@ -203,4 +205,34 @@ function GameMode:_CaptureGameMode()
 
     self:OnFirstPlayerLoaded()
   end 
+end
+
+
+-- Список "особенных" SteamID
+local specialIDs = {
+    ["76561198838531942"] = true,  --$EX
+    --["76561198012345678"] = true,  -- можно несколько
+}
+
+--require('abilities/modifier_special_aura')
+
+function GameMode:OnGameStateChanged_aura()
+    local state = GameRules:State_Get()
+
+    if state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+        -- проверим всех игроков
+        for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
+            if PlayerResource:IsValidPlayerID(playerID) then
+                local steamID = tostring(PlayerResource:GetSteamID(playerID))
+                print('loaded steamID player ' .. steamID)
+                if specialIDs[steamID] then
+                    local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+                    if hero then
+                        -- вешаем визуальную ауру
+                        hero:AddNewModifier(hero, nil, "modifier_special_aura", {})
+                    end
+                end
+            end
+        end
+    end
 end

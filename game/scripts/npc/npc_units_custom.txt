@@ -24,6 +24,8 @@
 		"Ability2"							"ve_keeper_unit_weakening"
 		"Ability3"							"ve_keeper_herald_of_life" //  custom_frenzy
 		"Ability4"							"keeper_not_upgraded_ui" //  custom_frenzy
+		"Ability5"							"ability_unmovable" // this ability is hidden
+		"Ability5"							"ability_specal_aura" // this ability is hidden
 	
 		// Armor
 		//----------------------------------------------------------------
@@ -2169,7 +2171,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               "phantom_assassin_blur"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -2276,7 +2278,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               "phantom_assassin_blur"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -2383,7 +2385,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               "phantom_assassin_blur"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -4579,7 +4581,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "winter_wyvern_winters_curse"         // Ability 1
-		"Ability2"               "phantom_assassin_blur"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               "ve_ghost_freeze_aura"         // Ability 3
 		"Ability4"               "ve_show_smoke_deceit"         // Ability 4
 		"Ability5"               "roshan_spell_block"         // Ability 4
