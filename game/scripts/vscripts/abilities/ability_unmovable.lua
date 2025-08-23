@@ -17,8 +17,10 @@ function modifier_rooted_unmovable:CheckState()
         --[MODIFIER_STATE_NO_UNIT_COLLISION] = true,  -- коллизия включена
         [MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED] = true, -- нельзя сдвинуть
         [MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY] = true,
+        [MODIFIER_STATE_IGNORING_MOVE_ORDERS] = true,
         -- MODIFIER_STATE_ALLOW_PATHING_THROUGH_TREES
         -- MODIFIER_STATE_CAN_USE_BACKPACK_ITEMS ???
     }
     return state
 end
+
