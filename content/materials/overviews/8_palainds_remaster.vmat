@@ -1,0 +1,10 @@
+"Layer0"
+{
+	"shader"	"ui.vfx"
+	"F_TRANSLUCENT"	"0"
+	"TextureColor"	"materials/overviews/8_palainds_remaster.png"
+	"VRF Original Textures"
+	{
+		"g_tColor"	"materials/overviews/8_palainds_remaster_tga_ca7c427a.vtex"
+	}
+}

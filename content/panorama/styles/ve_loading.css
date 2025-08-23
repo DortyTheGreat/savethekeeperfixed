@@ -1,0 +1,46 @@
+#gameTypeHeaderLabel{
+  color: white;
+  margin-top: 50px;
+  font-size: 15px;
+  margin-left: 100px;
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 85, 1);
+  padding: 10px;
+}
+ #typeFast{
+  color: white;
+  margin-top: 100px;
+  font-size: 30px;
+  margin-left: 100px;
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 85, 1);
+  padding: 30px;
+ }
+ #typeClassic{
+  color: white;
+  margin-top: 200px;
+  font-size: 30px;
+  margin-left: 100px;
+  padding: 30px;
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 85, 1);
+ }
+ #typeLong{
+  color: white;
+  margin-top: 300px;
+  font-size: 30px;
+  margin-left: 100px;
+  padding: 30px;
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 85, 1);
+ }
+
+ #typeLong:selected,#typeFast:selected,#typeClassic:selected{
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 125, 1);
+ }
+
+ #typeFastCount,#typeClassicCount,#typeLongCount{
+  margin-left: 150px;
+  font-size: 14px;
+}

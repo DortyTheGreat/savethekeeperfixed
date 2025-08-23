@@ -1,0 +1,93 @@
+#global_panel{
+  width: 700px;
+  height: 600px;
+  margin-left: 33%;
+  margin-right: 30%;
+  margin-top: 20%;
+  flow-children: right;
+  visibility: collapse;
+}
+
+ #global_body{
+  background-color: rgba(25,25,25,0.9);
+  border: 1px solid #767676 ;
+  padding: 15px;
+ }
+
+ #see_upgrade_panel{
+  position: 300px 79% 0px;
+ }
+
+ #see_upgrade_panel:active{
+  wash-color: #ddd;
+ }
+
+ .see_upgrade_panel_label{
+  text-align: center;
+  margin-top: 80px;
+  font-size: 24px;
+  padding: 3px;
+  color: white;
+  z-index: 5;
+  text-shadow: 2px 2px 8px 3.0 #333333b0;
+ }
+
+ .vert_list{
+  flow-children: down;
+ }
+
+ .horiz_list{
+  flow-children: right;
+ }
+
+ .upgrade_avatar{
+  width: 150px;
+  height: 150px;
+ }
+
+ .upgrade_icon{
+  width: 75px;
+  height: 75px;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+ .utils_arrow{
+  width: 150px;
+  height: 75px;
+  margin: 37px;
+ }
+
+ .upgrade_price{
+  background-color: black;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: 25px;
+  font-size: 14px;
+  color: yellow;
+  z-index: 5;
+ }
+
+ .upgrade_level{
+  background-color: rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 85px;
+  box-shadow: fill rgba(0,0,0,0.7) 2px 2px 3px 0px;
+  font-size: 24px;
+  color: black;
+  z-index: 5;
+  padding: 1px;
+  border-radius: 3px;
+  border: 1px solid #373737;
+ }
+
+ .buy_upgrade:active{
+  wash-color: #999;
+ }
+
+ #exit_button{
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}

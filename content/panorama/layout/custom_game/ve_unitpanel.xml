@@ -1,0 +1,72 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/ve_unitpanel.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/ve_unitpanel.vjs_c" />
+	</scripts>
+	<Panel hittest="false" class="body-panel">
+		<Panel id="unitlist-label" />
+		<Panel id="game-timer-label">
+			<Label id="game-timer" text="00:00" />
+		</Panel>
+		<Panel id="info-label">
+			<Panel id="unit-label">
+				<Image class="util-icon" src="s2r://panorama/images/utils/units_icon_png.vtex" />
+				<Label text="#Game_next_round_time" />
+				<Label id="unit-timer" text="00:00" />
+			</Panel>
+			<Panel id="income-label">
+				<Image class="util-icon" src="s2r://panorama/images/utils/coins_icon_png.vtex" />
+				<Label id="IncomeLabelNumber" text="1" />
+				<Label id="income-timer" text="(00:00)" />
+			</Panel>
+			<Panel id="food-label">
+				<Image class="util-icon" src="s2r://panorama/images/utils/food_icon_png.vtex" />
+				<Label id="FoodLabelNumber" text="1" />
+				<Label id="food-timer" text="(00:00)" />
+			</Panel>
+		</Panel>
+		<Panel id="unitpanel-container" class="unitpanel">
+			<Panel class="page-arrow">
+				<RadioButton group="RandomRadio" onactivate="SelectPage(-1)" checked="true" id="pageleft">
+					<Image class="pagination_arrow" src="s2r://panorama/images/utils/arrow_left_png.vtex" />
+				</RadioButton>
+				<Label id="PageLabelNumber" text="1" />
+				<RadioButton group="RandomRadio" onactivate="SelectPage(1)" id="pageright" text="">
+					<Image class="pagination_arrow" src="s2r://panorama/images/utils/arrow_right_png.vtex" />
+				</RadioButton>
+			</Panel>
+			<Panel id="unitlist-panel" />
+		</Panel>
+		<Panel id="more_units_button">
+			<RadioButton onactivate="ShowAllUnits(true)" checked="true" id="listright">
+				<Image class="pagination_arrow" src="s2r://panorama/images/utils/arrow_right_png.vtex" />
+				<Label text="Показать всё" class="text-desc" />
+			</RadioButton>
+			<RadioButton onactivate="ShowAllUnits(false)" id="listleft">
+				<Image class="pagination_arrow" src="s2r://panorama/images/utils/arrow_left_png.vtex" />
+				<Label text="Скрыть" class="text-desc" />
+			</RadioButton>
+		</Panel>
+		<Panel id="fulllist-panel">
+			<Panel class="full-unitlist-title">
+				<Label text="    Range | Meele | Glaive | Healer | Special | Ancient" />
+			</Panel>
+			<Panel id="full-unitlist-panel" />
+		</Panel>
+		<Panel id="reverse-direction">
+			<Panel id="drection-button">
+				<Button id="reverse-button" onactivate="ChangeCreepDirection()">
+					<Label id="reverse-label" text="Поменять направление крипов" />
+					<Label id="reverse-label-no" text="Доступно с Keeper Upgrade" />
+				</Button>
+			</Panel>
+			<Panel id="direction-image">
+				<Image id="direction-left" class="pagination_arrow direction-image" src="s2r://panorama/images/utils/arrow_left_png.vtex" />
+				<Image id="direction-right" class="pagination_arrow direction-image" src="s2r://panorama/images/utils/arrow_right_png.vtex" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

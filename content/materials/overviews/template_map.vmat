@@ -1,0 +1,11 @@
+"Layer0"
+{
+	"shader"	"ui.vfx"
+	"F_STENCIL_MASKING"	"1"
+	"F_TRANSLUCENT"	"0"
+	"TextureColor"	"materials/overviews/template_map.png"
+	"VRF Original Textures"
+	{
+		"g_tColor"	"materials/overviews/template_map_tga_d9088edf.vtex"
+	}
+}

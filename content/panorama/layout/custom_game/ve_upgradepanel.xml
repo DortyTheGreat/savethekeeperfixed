@@ -1,0 +1,86 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/ve_upgradepanel.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/ve_upgradepanel.vjs_c" />
+	</scripts>
+	<Panel>
+		<Button id="see_upgrade_panel" onactivate="SeeUpgradePanel()">
+			<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/icon_upgrade_png.vtex" />
+			<Label class="see_upgrade_panel_label" text="UPGRADES" />
+		</Button>
+		<Panel id="global_panel">
+			<Panel id="global_body">
+				<Panel class="horiz_list">
+					<Panel class="vert_list">
+						<Image class="upgrade_avatar" src="s2r://panorama/images/upgrades/dragon_knight_avatar_png.vtex" />
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;melee_damage&apos;)" id="melee_damage">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_sword_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;melee_armor&apos;)" id="melee_armor">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_armor_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;melee_body&apos;)" id="melee_body">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_body_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+					</Panel>
+					<Panel class="vert_list">
+						<Image class="upgrade_avatar" src="s2r://panorama/images/upgrades/sniper_avatar_png.vtex" />
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;range_damage&apos;)" id="range_damage">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_cannon_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;range_armor&apos;)" id="range_armor">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_armor_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;range_body&apos;)" id="range_body">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_body_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+					</Panel>
+					<Panel class="vert_list">
+						<Image class="upgrade_avatar" src="s2r://panorama/images/upgrades/chen_avatar_png.vtex" />
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;healer_armor&apos;)" id="healer_armor">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_armor_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;healer_body&apos;)" id="healer_body">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_body_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+					</Panel>
+					<Panel class="vert_list">
+						<Image class="upgrade_avatar" src="s2r://panorama/images/upgrades/magebreaker_avatar_png.vtex" />
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;special_armor&apos;)" id="special_armor">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_armor_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+						<Button class="buy_upgrade" onactivate="BuyUpgrade(&apos;special_body&apos;)" id="special_body">
+							<Image class="upgrade_icon" src="s2r://panorama/images/upgrades/upgrades/icon_body_png.vtex" />
+							<Label class="upgrade_price" text="1000" />
+							<Label class="upgrade_level" text="0" />
+						</Button>
+					</Panel>
+				</Panel>
+			</Panel>
+			<Button class="buy_upgrade" id="exit_button" onactivate="HideUpgradePanel()">
+				<Image src="s2r://panorama/images/upgrades/icon_exit_png.vtex" />
+			</Button>
+		</Panel>
+	</Panel>
+</root>

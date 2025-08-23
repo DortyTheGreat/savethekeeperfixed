@@ -1,0 +1,61 @@
+<root>
+	<!--                                                                                                                                                      -->	
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/ve_infopanel.vcss_c" />
+	</styles>
+
+	<!--                                                                          -->
+	<Panel class="GameInfo" >
+
+		<!--                                                                          -->
+		<Panel id="Title">
+			<Label id="TitleName" text="#addon_game_name" />
+		</Panel> 
+		<Label id="H1" class="Header" html="true" text="#basics_of_the_game" /> 
+		<Panel id="Info4" class="InfoStringLeft" >
+			<Image id="InfoImage" src="s2r://panorama/images/custom_game/infopanel/save_keeper_png.vtex" />
+			<Label id="InfoText" text="#save_keeper_info" />						
+		</Panel> 
+		<Panel id="Info1" class="InfoStringRight" >
+			<Image id="InfoImage" src="s2r://panorama/images/custom_game/infopanel/pal_map_png.vtex" />
+			<Label id="InfoText" text="#map_info" />						
+		</Panel> 	
+		 
+	
+		<Panel id="Info2" class="InfoStringLeft" >
+			<Image id="InfoImage" src="s2r://panorama/images/custom_game/infopanel/buy_panel_png.vtex" />
+			<Label id="InfoText2" text="#buy_info" />						
+		</Panel> 
+		<Panel id="Info3" class="InfoStringRight" >
+			<Image id="InfoImage" src="s2r://panorama/images/custom_game/infopanel/sell_panel_png.vtex" />
+			<Label id="InfoText" text="#sell_info" />						
+		</Panel> 
+
+		<Panel id="Info5">
+			<Label id="InfoText3" text="#about_me" />	
+		</Panel>
+		<Panel id="Info6" class="InfoStringDown" >
+			<Panel id="thx1" class="thx_class">
+				<DOTAAvatarImage steamid="76561198139685155" />
+				<DOTAUserName steamid="76561198139685155" />
+				<Label text="(Bug reports and suggestions)"/>
+			</Panel>
+			<Panel id="thx2" class="thx_class">
+				<DOTAAvatarImage steamid="76561198198680259" />
+				<DOTAUserName steamid="76561198198680259" />
+				<Label text="(Bug reports and suggestions)"/>
+			</Panel>
+			<Panel id="thx3" class="thx_class">
+				<DOTAAvatarImage steamid="76561198137742545" />
+				<DOTAUserName steamid="76561198137742545" />
+				<Label text="(Bug reports and suggestions)"/>
+			</Panel>
+			<Panel id="thx4" class="thx_class">
+				<DOTAAvatarImage steamid="76561198100124008" />
+				<DOTAUserName steamid="76561198100124008" />
+				<Label text="(Bug reports and suggestions)"/>
+			</Panel>
+		</Panel>
+	</Panel>		 
+</root>

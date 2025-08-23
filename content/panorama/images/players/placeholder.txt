@@ -1,0 +1,3 @@
+this file is a placeholder. it is actually 99796146_png.vtex_c (which is a photo of some pro player apparently)
+
+I have no idea why the game tries to call for this 0_png file, but I hope that adding it could prevent the crashes

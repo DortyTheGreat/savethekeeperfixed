@@ -1,0 +1,28 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/ve_loading.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/ve_loading.vjs_c" />
+	</scripts>
+	<Panel>
+		<Panel id="GameType">
+			<Panel id="gameTypeHeader">
+				<Label id="gameTypeHeaderLabel" text="Выберите режим игры" />
+			</Panel>
+			<RadioButton group="gamemodetype" onactivate="chooseType(0, &apos;fast&apos;)" hittest="true" id="typeFast">
+				<Label text="Быстрый" />
+				<Label id="typeFastCount" text="0 голосов" />
+			</RadioButton>
+			<RadioButton group="gamemodetype" onactivate="chooseType(1, &apos;classic&apos;)" hittest="true" selected="true" id="typeClassic">
+				<Label text="Классика" />
+				<Label id="typeClassicCount" text="0 голосов" />
+			</RadioButton>
+			<RadioButton group="gamemodetype" onactivate="chooseType(2, &apos;long&apos;)" hittest="true" id="typeLong">
+				<Label text="Долгий" />
+				<Label id="typeLongCount" text="0 голосов" />
+			</RadioButton>
+		</Panel>
+	</Panel>
+</root>

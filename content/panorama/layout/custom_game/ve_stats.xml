@@ -1,0 +1,32 @@
+<root>
+
+	<styles>
+		<include src="s2r://panorama/styles/ve_unitpanel.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/ve_unitpanel.vjs_c" />
+	</scripts>
+	<Panel class="body-panel">
+		<Panel id="game-timer-label">
+			<Label id="game-timer" text="00:00"/>
+		</Panel>
+		<Panel id="info-label">
+			<Panel id="unit-label">
+				<Image class="util-icon" src="s2r://panorama/images/utils/units_icon_png.vtex" />
+				<Label text="#Game_next_round_time"/>
+				<Label id="unit-timer" text="00:00"/>
+			</Panel>
+			<Panel id="income-label">
+				<Image class="util-icon" src="s2r://panorama/images/utils/coins_icon_png.vtex" />
+				<Label id="IncomeLabelNumber" text="1"/>
+				<Label id="income-timer" text="(00:00)"/>
+			</Panel> 
+			<Panel id="food-label">
+				<!--                                        -->
+				<Image class="util-icon" src="s2r://panorama/images/utils/food_icon_png.vtex" />
+				<Label id="FoodLabelNumber" text="1"/>
+				<Label id="food-timer" text="(00:00)"/>
+			</Panel>
+		</Panel>  
+	</Panel>
+</root>  

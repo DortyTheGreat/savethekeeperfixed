@@ -1,0 +1,29 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_loading_screen.vcss_c" />
+	</styles>
+	<scripts />
+	<Panel class="AddonLoadingRoot">
+		<Panel id="CustomBg">
+			<Image id="gamemode" class="SeqImg" src="s2r://panorama/images/custom_game/loading_screen/gamemode_png.vtex" />
+		</Panel>
+		<Panel id="customlist">
+			<Panel id="stupid_arena">
+				<Image class="img_preview" src="s2r://panorama/images/custom_game/loading_screen/preview_stupid_arena_jpg.vtex" />
+				<Label class="url_href" html="true" text="&lt;a href=&quot;http://www.example.com&quot;&gt; STUPID ARENA &lt;a&gt;" />
+			</Panel>
+			<Panel id="haulm">
+				<Image class="img_preview" src="s2r://panorama/images/custom_game/loading_screen/preview_haulm_jpg.vtex" />
+				<Label class="url_href" html="true" text="&lt;a href=&quot;http://www.example.com&quot;&gt; HAULM: Summoner Wars &lt;a&gt;" />
+			</Panel>
+			<Panel id="defense_tag">
+				<Image class="img_preview" src="s2r://panorama/images/custom_game/loading_screen/preview_defense_tag_jpg.vtex" />
+				<Label class="url_href" html="true" text="&lt;a href=&quot;http://www.example.com&quot;&gt; Defense Tag &lt;a&gt;" />
+			</Panel>
+		</Panel>
+		<Panel id="TitlePanel">
+			<Label id="AddonTitle" text="#addon_game_name" style="" />
+		</Panel>
+	</Panel>
+</root>

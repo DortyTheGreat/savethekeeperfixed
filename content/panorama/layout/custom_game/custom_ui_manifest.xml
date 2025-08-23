@@ -1,0 +1,43 @@
+<root> 
+  <scripts>
+    <include src="s2r://panorama/scripts/playertables/playertables_base.vjs_c" />
+    <include src="s2r://panorama/scripts/ve_debugger.vjs_c" />
+	<include src="s2r://panorama/scripts/ui_changes.vjs_c" />
+  </scripts>
+  
+  <Panel id="ChatRoot">
+        <Label id="CustomChatLine" text="" class="CustomChat" />
+  </Panel>
+  <!--       Удалил какой-то худ, следует потом вернуть... 2025                   -->
+
+  <Panel>
+    <!--                          -->
+
+    <!--                                                                                                              
+                                                                                                                
+																									
+																														
+                                                                                                           -->
+																										   
+
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/selection.xml" />
+    <CustomUIElement type="Hud"	layoutfile="file://{resources}/layout/custom_game/ve_unitpanel.xml" />
+    <CustomUIElement type="Hud"	layoutfile="file://{resources}/layout/custom_game/ve_upgradepanel.xml" />
+	
+	<CustomUIElement type="HudTopBar"           layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
+	<CustomUIElement type="EndScreen"           layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
+	<CustomUIElement type="GameSetup"           layoutfile="file://{resources}/layout/custom_game/team_select.xml" />
+	<CustomUIElement type="GameSetup"           layoutfile="file://{resources}/layout/custom_game/ve_loading.xml" />
+	<CustomUIElement type="HeroSelection"       layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
+	<CustomUIElement type="GameInfo" 			layoutfile="file://{resources}/layout/custom_game/ve_infopanel.xml" />
+	<!--                                       	                                                                           -->  
+    <!--                
+
+        
+                                                                                                                                         
+
+
+                                                                                                                                 
+    -->
+  </Panel>
+</root>

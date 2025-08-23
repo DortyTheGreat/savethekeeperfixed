@@ -1,0 +1,10 @@
+"Layer0"
+{
+	"shader"	"ui.vfx"
+	"F_TRANSLUCENT"	"0"
+	"TextureColor"	"materials/overviews/4x4_paladins.png"
+	"VRF Original Textures"
+	{
+		"g_tColor"	"materials/overviews/4x4_paladins_tga_51d6ce34.vtex"
+	}
+}
