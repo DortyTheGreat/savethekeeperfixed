@@ -20,6 +20,7 @@
 		"precache"
 		{
 			"particle"	"particles/units/heroes/hero_invoker/invoker_ambient_light.vpcf"
+			"particle"  "particles/omniknight_repel_buff_ti8_glyph_custom.vpcf"
 		}
 	}
 

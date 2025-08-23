@@ -25,7 +25,7 @@
 		"Ability3"							"ve_keeper_herald_of_life" //  custom_frenzy
 		"Ability4"							"keeper_not_upgraded_ui" //  custom_frenzy
 		"Ability5"							"ability_unmovable" // this ability is hidden
-		"Ability5"							"ability_specal_aura" // this ability is hidden
+		"Ability6"							"ability_specal_aura" // this ability is hidden
 	
 		// Armor
 		//----------------------------------------------------------------

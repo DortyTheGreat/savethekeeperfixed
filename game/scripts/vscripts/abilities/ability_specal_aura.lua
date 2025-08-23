@@ -8,7 +8,7 @@ end
 
 modifier_special_aura = class({})
 
-function modifier_special_aura:IsHidden() return false end
+function modifier_special_aura:IsHidden() return true end
 function modifier_special_aura:IsPurgable() return false end
 
 function modifier_special_aura:OnCreated(kv)
