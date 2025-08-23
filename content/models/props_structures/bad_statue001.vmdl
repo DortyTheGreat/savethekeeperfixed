@@ -1,0 +1,206 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+				]
+				bone_cull_type = "None"
+			},
+			
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					
+					{
+						_class = "RenderMeshFile"
+						name = "bad_statue001_model"
+						filename = "models/props_structures/bad_statue001_bad_statue001_model.dmx"
+					},
+				]
+			},
+			
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						ignore_rotation = false
+						parent_bone = "root"
+						relative_origin = 
+						[
+							0.000000,
+							90.000000,
+							0.000000,
+						]
+						relative_angles = 
+						[
+							0.000000,
+							0.000000,
+							-90.000010,
+						]
+						weight = 1.000000
+					},
+					
+					{
+						_class = "Attachment"
+						name = "attach_fx"
+						ignore_rotation = false
+						parent_bone = "root"
+						relative_origin = 
+						[
+							0.000000,
+							90.000000,
+							0.000000,
+						]
+						relative_angles = 
+						[
+							0.000000,
+							0.000009,
+							-90.000010,
+						]
+						weight = 1.000000
+					},
+					
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						ignore_rotation = false
+						parent_bone = "root"
+						relative_origin = 
+						[
+							0.000000,
+							90.000000,
+							0.000000,
+						]
+						relative_angles = 
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						weight = 1.000000
+					},
+				]
+			},
+			
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					
+					{
+						_class = "HitboxSet"
+						name = "select_low"
+						children = 
+						[
+							
+							{
+								_class = "Hitbox"
+								hitbox_mins = 
+								[
+									-67.001320,
+									0.643110,
+									-59.678890,
+								]
+								hitbox_maxs = 
+								[
+									64.925510,
+									93.898130,
+									59.709560,
+								]
+								name = "joint1"
+								parent_bone = "joint1"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+					
+					{
+						_class = "HitboxSet"
+						name = "select_high"
+						children = 
+						[
+							
+							{
+								_class = "Hitbox"
+								hitbox_mins = 
+								[
+									-67.001320,
+									0.643110,
+									-59.678890,
+								]
+								hitbox_maxs = 
+								[
+									64.925510,
+									93.898130,
+									59.709560,
+								]
+								name = "joint1"
+								parent_bone = "joint1"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+				]
+			},
+			
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					
+					{
+						_class = "Bone"
+						name = "root"
+						origin = 
+						[
+							-0.000000,
+							-0.000000,
+							-0.000000,
+						]
+						angles = 
+						[
+							0.000277,
+							89.999730,
+							89.999730,
+						]
+						do_not_discard = true
+					},
+					
+					{
+						_class = "Bone"
+						name = "joint1"
+						origin = 
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						angles = 
+						[
+							0.000000,
+							90.000000,
+							90.000000,
+						]
+						do_not_discard = true
+					},
+				]
+			},
+		]
+	}
+}
