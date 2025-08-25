@@ -34,13 +34,41 @@
   box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
   background-color: rgba(75, 75, 85, 1);
  }
-
- #typeLong:selected,#typeFast:selected,#typeClassic:selected{
+ #typeModern{
+  color: white;
+  margin-top: 400px;
+  font-size: 30px;
+  margin-left: 100px;
+  padding: 30px;
   box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
-  background-color: rgba(75, 75, 125, 1);
+  background-color: rgba(75, 75, 85, 1);
+ }
+ #typeTurbo{
+  color: white;
+  margin-top: 500px;
+  font-size: 30px;
+  margin-left: 100px;
+  padding: 30px;
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 75, 85, 1);
  }
 
- #typeFastCount,#typeClassicCount,#typeLongCount{
+ #typeFast:selected,#typeTurbo:selected{
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(75, 105, 85, 1);
+ }
+ 
+  #typeClassic:selected{
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(105, 105, 85, 1);
+ }
+ 
+  #typeLong:selected,#typeModern:selected{
+  box-shadow: fill rgba(0,0,0,0.3) 2px 2px 3px 0px;
+  background-color: rgba(105, 75, 85, 1);
+ }
+
+ #typeFastCount,#typeClassicCount,#typeLongCount,#typeTurboCount,#typeModernCount{
   margin-left: 150px;
   font-size: 14px;
 }

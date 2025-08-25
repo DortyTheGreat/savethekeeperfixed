@@ -24,15 +24,13 @@ function GameMode:OnPlayerVoteReady(event)
 	TYPE_VOTES[event.PlayerID] = event.type
 	
 	local fastCount, classicCount, longCount = countVoteTypes()
-	
 	CustomGameEventManager:Send_ServerToAllClients("vote_load", {fastCount = fastCount, classicCount = classicCount, longCount = longCount})
-	
 	local total_count_str = " (<font color='green'>".. fastCount .."</font> " .. "<font color='gold'>".. classicCount .."</font> " .. "<font color='purple'>".. longCount .."</font>)"
 	
 	if event.type == 0 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='green'>".. "Быстрый" .."</font>" .. total_count_str, 0, 0)
 	elseif event.type == 1 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='gold'>".. "Классический" .."</font>" .. total_count_str, 0, 0)
-	--elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='red'>".. "Долгий" .."</font>" .. total_count_str, 0, 0) end
-	elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='purple'>".. "Modern" .."</font>" .. total_count_str, 0, 0) end
+	elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='red'>".. "Долгий" .."</font>" .. total_count_str, 0, 0) end
+	--elseif event.type == 2 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='purple'>".. "Modern" .."</font>" .. total_count_str, 0, 0) end
 end
 
 
@@ -99,7 +97,8 @@ function GameMode:ChangeSettings(TYPE_VOTES)
 		elseif classicCount >= fastCount and classicCount >= longCount then
 			init_classic_wavemode()
 		elseif longCount >= fastCount and longCount >= classicCount then
-			init_modern_wavemode()
+			--init_modern_wavemode()
+			init_long_wavemode()
 		end	
 	end
 end
@@ -140,11 +139,14 @@ function GameMode:OnAllPlayersLoaded()
 	
 	--CustomGameEventManager:RegisterListener( "unitpanel_debug", Dynamic_Wrap(GameMode, "UnitPanelDebug") )
 	
-	keyvalue = LoadKeyValues("scripts/npc/npc_units_custom.txt")
-	Msg("Keyvalues loaded;")		
-	for a, unit in pairs(GameMode.data_UnitList) do 
-		GameRules.unitdata[unit.name] = {UnitType = keyvalue[unit.name].UnitType, unitindex = keyvalue[unit.name].UnitIndex, AItype = keyvalue[unit.name].AItype, ancient = keyvalue[unit.name].AncientUnit, unitclass = keyvalue[unit.name].UnitClass, cost = keyvalue[unit.name].UnitCost, income = keyvalue[unit.name].UnitIncome, food = keyvalue[unit.name].NeedFood, health = keyvalue[unit.name].StatusHealth, page = keyvalue[unit.name].UnitPage, mindamage = keyvalue[unit.name].AttackDamageMin, maxdamage = keyvalue[unit.name].AttackDamageMax, attackrange = keyvalue[unit.name].AttackRange, armor = keyvalue[unit.name].ArmorPhysical, mingold = keyvalue[unit.name].BountyGoldMin, maxgold = keyvalue[unit.name].BountyGoldMax, ability1 = keyvalue[unit.name].Ability1, ability2 = keyvalue[unit.name].Ability2, ability3 = keyvalue[unit.name].Ability3, ability4 = keyvalue[unit.name].Ability4, ability5 = keyvalue[unit.name].Ability5}
-	end
+	Timers:CreateTimer(0.1,function()
+		keyvalue = LoadKeyValues("scripts/npc/npc_units_custom.txt")
+		Msg("Keyvalues loaded;")		
+		for a, unit in pairs(GameMode.data_UnitList) do 
+			GameRules.unitdata[unit.name] = {UnitType = keyvalue[unit.name].UnitType, unitindex = keyvalue[unit.name].UnitIndex, AItype = keyvalue[unit.name].AItype, ancient = keyvalue[unit.name].AncientUnit, unitclass = keyvalue[unit.name].UnitClass, cost = CREEP_COST_MULT * keyvalue[unit.name].UnitCost, income = keyvalue[unit.name].UnitIncome, food = keyvalue[unit.name].NeedFood, health = keyvalue[unit.name].StatusHealth, page = keyvalue[unit.name].UnitPage, mindamage = keyvalue[unit.name].AttackDamageMin, maxdamage = keyvalue[unit.name].AttackDamageMax, attackrange = keyvalue[unit.name].AttackRange, armor = keyvalue[unit.name].ArmorPhysical, mingold = keyvalue[unit.name].BountyGoldMin, maxgold = keyvalue[unit.name].BountyGoldMax, ability1 = keyvalue[unit.name].Ability1, ability2 = keyvalue[unit.name].Ability2, ability3 = keyvalue[unit.name].Ability3, ability4 = keyvalue[unit.name].Ability4, ability5 = keyvalue[unit.name].Ability5}
+		end
+	end)
+	
 
 	Timers:CreateTimer(0.1, function()
 			if CURRENT_STATE_TIME == 0 then
@@ -276,7 +278,7 @@ function GameMode:OnGameInProgress()
 				processedOwnerIDs[ownerid] = true
 				
 				--if ownerid and PlayerResource:GetPlayer(ownerid) and PlayerResource:IsValidPlayer(ownerid) and PlayerResource:HasSelectedHero( ownerid ) then
-					local curunitlist = CDOTA_PlayerResource:GetUnitlist(ownerid)
+					local curunitlist = deepcopy(CDOTA_PlayerResource:GetUnitlist(ownerid))
 					local team = hero:GetTeam()
 					for key,unit in pairs(curunitlist) do
 						local ucounter = 0

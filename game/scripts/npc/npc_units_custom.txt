@@ -4095,8 +4095,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"               "65"      // Experience earn.
-		"BountyGoldMin"            "70"      // Gold earned min.
-		"BountyGoldMax"            "95"      // Gold earned max.
+		"BountyGoldMin"            "45"      // Gold earned min.
+		"BountyGoldMax"            "90"      // Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4174,7 +4174,7 @@
 		
 		// CLASSESS
 		"UnitClass"				"#boss_unit_doom"
-		"UnitCost"				"6500"
+		"UnitCost"				"7000"
 		"UnitIncome"			"14"
 		"UnitPage"				"6"
 		"AncientUnit"			"1"
