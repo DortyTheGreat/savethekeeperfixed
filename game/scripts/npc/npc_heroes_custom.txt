@@ -60,16 +60,6 @@
 		"Ability4"		"ve_centaur_steel_skin"
 	}
 	
-	"npc_ve_centaur_warruner"
-	{
-		"override_hero"				"npc_dota_hero_zuus"
-		"Ability1"		"zuus_arc_lightning"
-		"Ability2"		"zuus_lightning_bolt"
-		"Ability3"		"zuus_static_field"
-		"Ability4"		"zuus_thundergods_wrath"
-		"Ability5"		""	
-	}
-	
 	"npc_ve_legion_commander"
 	{
 		"override_hero"		"npc_dota_hero_legion_commander"
@@ -82,5 +72,6 @@
 		"override_hero"		"npc_dota_hero_wisp"
 
 		"Ability6"		"ve_wisp_element_essence"
+		"Ability15" "special_bonus_hp_regen_30" // level 20 right slot
 	}
 }

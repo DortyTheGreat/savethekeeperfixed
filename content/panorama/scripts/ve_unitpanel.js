@@ -418,8 +418,23 @@ function OnTimerGoing(data)
 function cmdBuyUnit(unitname, count)
 {
 	//$.Msg( "EVENT: unit_buy - true ");
+
+	
+	//$.Msg( "EVENT: unit_sell - true ");
+	var unitcount = 0;
+	for(var i in unitHaved)
+	{
+		(function(){
+			var m = i;
+			if(unitHaved[m].count > 0) unitcount += unitHaved[m].count;
+			//$.Msg(unitcount);
+		})();
+	}
+		
+	
+
 	var needfood =  myfood + unitConf[unitname].food;
-	if(Players.GetGold(Players.GetLocalPlayer()) >= unitConf[unitname].cost && needfood <= mymaxfood) 
+	if(Players.GetGold(Players.GetLocalPlayer()) >= unitConf[unitname].cost && needfood <= mymaxfood && unitcount < 40) 
 	{
 		
 		var data = {

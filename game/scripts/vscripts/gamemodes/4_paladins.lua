@@ -176,9 +176,18 @@ end
 function GameMode:OnBuyUnit(event)
 	
 	local hero = PlayerResource:GetSelectedHeroEntity(event.PlayerID)
+	local curunitlist = CDOTA_PlayerResource:GetUnitlist(hero:GetPlayerOwnerID())
+	local unitcount = 0;
+
+	for a, unit in pairs(curunitlist) do
+
+		if unit.count > 0 then unitcount = unitcount + unit.count end
+	end
+
+	
 	if event.count ~= nil then
 		local myfood = CDOTA_PlayerResource:GetFood(event.PlayerID)
-		if hero:GetGold() >= GameRules.unitdata[event.name].cost and myfood + GameRules.unitdata[event.name].food <= CDOTA_PlayerResource:GetMaxFood(event.PlayerID)then
+		if hero:GetGold() >= GameRules.unitdata[event.name].cost and myfood + GameRules.unitdata[event.name].food <= CDOTA_PlayerResource:GetMaxFood(event.PlayerID) and unitcount < 40 then -- unit hardlimit of 40
 			CDOTA_PlayerResource:SetIncome(event.PlayerID, CDOTA_PlayerResource:GetIncome(event.PlayerID) + GameRules.unitdata[event.name].income)
 			CDOTA_PlayerResource:SetFood(event.PlayerID, myfood + GameRules.unitdata[event.name].food)
 			if event.count == 0 and hero:GetRespawnsDisabled() == false then

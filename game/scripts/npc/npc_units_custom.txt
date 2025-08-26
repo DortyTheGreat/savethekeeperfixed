@@ -986,8 +986,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"               "black_dragon_dragonhide_aura"         // Ability 1
-		"Ability2"               "ve_dragon_blood"         // Ability 2
+		"Ability1"               "ve_dragon_blood"         // Ability 1
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -1096,7 +1096,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "ve_dragon_blood"         // Ability 1
-		"Ability2"               "black_dragon_dragonhide_aura"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -1204,7 +1204,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "ve_dragon_blood"         // Ability 1
-		"Ability2"               "black_dragon_dragonhide_aura"         // Ability 2
+		"Ability2"               ""         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -1313,7 +1313,7 @@
 		//----------------------------------------------------------------
 		"Ability1"               "ve_dragon_blood"         // Ability 1
 		"Ability2"               "legion_commander_moment_of_courage"         // Ability 2
-		"Ability3"               "black_dragon_dragonhide_aura"         // Ability 3
+		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
 		// Armor
@@ -1421,7 +1421,7 @@
 		//----------------------------------------------------------------
 		"Ability1"               "ve_dragon_blood"         // Ability 1
 		"Ability2"               "legion_commander_moment_of_courage"         // Ability 2
-		"Ability3"               "black_dragon_dragonhide_aura"         // Ability 3
+		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
 		// Armor
@@ -2064,7 +2064,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               ""         // Ability 2
+		"Ability2"               "ve_evasion"         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -2171,7 +2171,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               ""         // Ability 2
+		"Ability2"               "ve_evasion"         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -2278,7 +2278,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               ""         // Ability 2
+		"Ability2"               "ve_evasion"         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -2385,7 +2385,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "luna_moon_glaive"         // Ability 1
-		"Ability2"               ""         // Ability 2
+		"Ability2"               "ve_evasion"         // Ability 2
 		"Ability3"               ""         // Ability 3
 		"Ability4"               ""         // Ability 4
 
@@ -4581,7 +4581,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"               "winter_wyvern_winters_curse"         // Ability 1
-		"Ability2"               ""         // Ability 2
+		"Ability2"               "ve_evasion"         // Ability 2
 		"Ability3"               "ve_ghost_freeze_aura"         // Ability 3
 		"Ability4"               "ve_show_smoke_deceit"         // Ability 4
 		"Ability5"               "roshan_spell_block"         // Ability 4

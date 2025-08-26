@@ -3,7 +3,38 @@
 "DOTAAbilities"
 {
   "Version"   "1"
+
+	//UNIT DRAGON BLOOD
+	"ve_evasion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"phantom_assassin_blur"
+		"LevelsBetweenUpgrades"	"0"
+		"MaxLevel" "7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"evasion"				"0 0 0 10 20 30 40"
+		}
+		"Modifiers"
+		{
+			"ve_dragon_blood_modifier"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
 	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
+				}
+			}
+		}
+	}
+
 	"ability_unmovable"
 	{
 		"BaseClass"         "ability_lua"

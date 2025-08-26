@@ -1,0 +1,16 @@
+v 2.9
+
+
+Fixes:
+- Creep Dragon Knight: removed aura ability from levels 1-5 (only a visual change)
+- Creep Luna, Ghost Keeper: Returned evasion ability ("0 0 0 10 20 30 40" evasion chance)
+- Left 20th level IO's talent replaced with +30 hp regen
+- Zuus: returned to normal
+- Centaur: fixed Steel Skin ability 
+
+Balance:
+- Changed neutral items timing (5 15 25 35 60 70 -> 2 5 10 15 20 25)
+- Added hardlimit of 40 creeps per wave
+
+Other:
+- Added imba show video to steamcommunity page
