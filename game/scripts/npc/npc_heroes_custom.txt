@@ -74,4 +74,12 @@
 		"Ability6"		"ve_wisp_element_essence"
 		"Ability15" "special_bonus_hp_regen_30" // level 20 right slot
 	}
+
+	"npc_ve_hero_snapfire"
+	{
+		"override_hero"		"npc_dota_hero_snapfire"
+
+		"Ability4"              ""
+		"Ability5"              ""
+	}
 }
