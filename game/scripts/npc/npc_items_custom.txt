@@ -2026,6 +2026,7 @@
 		"ItemStockMax" "1" 
 		"ItemStockTime" "3600"
 		"ItemStockInitial" "1"
+		"IsTempestDoubleClonable"		"0"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------

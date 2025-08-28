@@ -397,6 +397,7 @@ function GameMode:OnEntityKilled( keys )
 		end
 		if canrespawn == 1 then
 			GameRules:SetGameWinner(killerEntity:GetTeam())
+			SendToServer(killerEntity:GetTeam())
 		end
 	elseif killedUnit ~= killerEntity and killedUnit:IsHero() and not killedUnit:IsIllusion() and killedUnit:IsReincarnating() == false then
 		if PlayerResource:GetConnectionState(killedUnit:GetPlayerOwnerID()) == DOTA_CONNECTION_STATE_CONNECTED then
