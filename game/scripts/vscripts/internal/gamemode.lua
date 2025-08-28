@@ -103,6 +103,7 @@ function GameMode:_InitGameMode()
   ListenToGameEvent('dota_player_used_ability', Dynamic_Wrap(GameMode, 'OnAbilityUsed'), self)
   ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(GameMode, '_OnGameRulesStateChange'), self)
   ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameStateChanged_aura"), self)
+  
   ListenToGameEvent('npc_spawned', Dynamic_Wrap(GameMode, '_OnNPCSpawned'), self)
   ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
   ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(GameMode, 'OnTeamKillCredit'), self)
@@ -207,7 +208,7 @@ function GameMode:_CaptureGameMode()
   end 
 end
 
-
+-- 878266214 is GetSteamAccountID, 76561198838531942 is GetSteamID (which is + 76561197960265728)
 -- Список "особенных" SteamID
 local specialIDs = {
     ["76561198838531942"] = true,  --$EX
@@ -219,20 +220,24 @@ local specialIDs = {
 function GameMode:OnGameStateChanged_aura()
     local state = GameRules:State_Get()
 
-    if state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-        -- проверим всех игроков
-        for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
-            if PlayerResource:IsValidPlayerID(playerID) then
-                local steamID = tostring(PlayerResource:GetSteamID(playerID))
-                print('loaded steamID player ' .. steamID)
-                if specialIDs[steamID] then
-                    local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-                    if hero then
-                        -- вешаем визуальную ауру
-                        hero:AddNewModifier(hero, nil, "modifier_special_aura", {})
-                    end
-                end
-            end
-        end
+    if state == DOTA_GAMERULES_STATE_PRE_GAME then
+        
+        -- this feels infinitely dumb, but delay should be applied in order to avoid some random loading bs 
+        Timers:CreateTimer(2.0,function()
+            for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
+              if PlayerResource:IsValidPlayerID(playerID) then
+                  local steamID = tostring(PlayerResource:GetSteamID(playerID))
+                  print('loaded steamID player ' .. steamID)
+                  if specialIDs[steamID] then
+                      local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+                      if hero then
+                          -- вешаем визуальную ауру
+                          hero:AddNewModifier(hero, nil, "modifier_special_aura", {})
+                      end
+                  end
+              end
+          end
+        end)
+        
     end
 end

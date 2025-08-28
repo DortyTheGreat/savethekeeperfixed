@@ -25,7 +25,13 @@
 		"Ability3"							"ve_keeper_herald_of_life" //  custom_frenzy
 		"Ability4"							"keeper_not_upgraded_ui" //  custom_frenzy
 		"Ability5"							"ability_unmovable" // this ability is hidden
+
+		// this feels dumb, but some unit shall have an ability in order to apply it's modifier... There might be a workaround,
+		// but I will think of it later on...
 		"Ability6"							"ability_specal_aura" // this ability is hidden
+		"Ability7"							"ability_stats_wins"
+		//"Ability8"							"ability_stats_losses"
+		
 	
 		// Armor
 		//----------------------------------------------------------------

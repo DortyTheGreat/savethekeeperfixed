@@ -4,6 +4,14 @@
 {
   "Version"   "1"
 
+	"ability_stats_wins"
+	{
+		"BaseClass"         "ability_lua"
+		"ScriptFile"        "abilities/ability_stats_wins.lua"
+		"AbilityTextureName"	"wins_counter"
+		"AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
 	//UNIT DRAGON BLOOD
 	"ve_evasion"
 	{
