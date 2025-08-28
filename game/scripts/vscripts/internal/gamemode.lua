@@ -237,6 +237,10 @@ function GameMode:OnGameStateChanged_aura()
                   end
               end
           end
+          
+          print('asking supabase for rating data ...')
+          GetFromServer()
+
         end)
         
     end

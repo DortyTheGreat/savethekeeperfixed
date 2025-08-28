@@ -122,20 +122,5 @@ function LoadStats(stats_json)
     end
 end
 
-ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameStateChanged_rating"), self)
 
---DOTA_GAMERULES_STATE_PRE_GAME = 4,
---DOTA_GAMERULES_STATE_GAME_IN_PROGRESS = 5,
--- require('libraries/timers')
-function GameMode:OnGameStateChanged_rating()
-    local state = GameRules:State_Get()
-
-    if state == DOTA_GAMERULES_STATE_PRE_GAME  then
-        -- проверим всех игроков
-        Timers:CreateTimer(2.0,function()
-            GetFromServer()
-        end)
-        
-    end
-end
 
