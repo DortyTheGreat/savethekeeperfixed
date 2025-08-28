@@ -24,7 +24,7 @@ function SendToServer(WinnerTeam)
     local json = dkjson.encode({
         winner = data.winner,
         players = data.players,
-        auth_key = GetDedicatedServerKeyV2("authKey")
+        auth_key = GetDedicatedServerKeyV3("authKey")
     })
 
     local req = CreateHTTPRequestScriptVM("POST", SUPABASE_URL .. "/rest/v1/matches")
@@ -37,5 +37,5 @@ function SendToServer(WinnerTeam)
         print("Supabase responded: " .. res.StatusCode)
         print("Body: " .. res.Body)
     end)
-    print("Body: " .. req.Body)
+    --print("Body: " .. req.Body)
 end
