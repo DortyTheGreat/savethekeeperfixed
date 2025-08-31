@@ -25,7 +25,7 @@ function GameMode:OnPlayerVoteReady(event)
 	
 	local fastCount, classicCount, longCount = countVoteTypes()
 	CustomGameEventManager:Send_ServerToAllClients("vote_load", {fastCount = fastCount, classicCount = classicCount, longCount = longCount})
-	local total_count_str = " (<font color='green'>".. fastCount .."</font> " .. "<font color='gold'>".. classicCount .."</font> " .. "<font color='purple'>".. longCount .."</font>)"
+	local total_count_str = ""--" (<font color='green'>".. fastCount .."</font> " .. "<font color='gold'>".. classicCount .."</font> " .. "<font color='purple'>".. longCount .."</font>)"
 	
 	if event.type == 0 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='green'>".. "Быстрый" .."</font>" .. total_count_str, 0, 0)
 	elseif event.type == 1 then GameRules:SendCustomMessage("Игрок <font color='#58ACFA'>".. PlayerResource:GetPlayerName(event.PlayerID) .."</font> выбрал режим <font color='gold'>".. "Классический" .."</font>" .. total_count_str, 0, 0)

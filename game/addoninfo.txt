@@ -2,7 +2,8 @@
 {
 	maps = 
 	[
-		"4_paladins"
+		"4_paladins",
+		"8_paladins"
 	]
 	IsPlayable = 1
 	EnablePickRules = 1
@@ -11,6 +12,10 @@
 		{
 			MaxPlayers = 4
 			map = "4_paladins"
+		},
+		{
+			MaxPlayers = 8
+			map = "8_paladins"
 		},
 	]
 	HideInTools = false

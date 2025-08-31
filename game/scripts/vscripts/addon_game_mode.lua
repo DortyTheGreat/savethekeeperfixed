@@ -16,9 +16,9 @@ function CDOTA_PlayerResource:GetPlayerIDs()
 end
 
 -- This is a detailed example of many of the containers.lua possibilities, but only activates if you use the provided "playground" map
-if GetMapName() == "8_paladins" then
+if GetMapName() == "8_paladins" or IsInToolsMode() then
   require("gamemodes/8_paladins")
-elseif GetMapName() == "4_paladins" or true then -- 2025 - eh...
+elseif GetMapName() == "4_paladins" then -- 2025 - eh...
   require("gamemodes/4_paladins")
 elseif GetMapName() == "4x4_paladins" then
   require("gamemodes/4x4_paladins")

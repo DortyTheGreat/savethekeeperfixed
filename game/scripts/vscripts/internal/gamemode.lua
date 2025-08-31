@@ -40,10 +40,6 @@ function GameMode:_InitGameMode()
     GameRules:LockCustomGameSetupTeamAssignment( LOCK_TEAM_SETUP )
     GameRules:EnableCustomGameSetupAutoLaunch( ENABLE_AUTO_LAUNCH )
   end
-
-	-- 2025 hotfix
-	MAX_NUMBER_OF_PLAYERS = 4
-	MAX_NUMBER_OF_TEAMS = 4
 	
 	
   -- This is multiteam configuration stuff
@@ -236,7 +232,7 @@ function GameMode:OnGameStateChanged_aura()
                       end
                   end
               end
-          end
+            end
           
           print('asking supabase for rating data ...')
           GetFromServer()

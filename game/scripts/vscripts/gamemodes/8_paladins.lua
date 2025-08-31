@@ -1,4 +1,10 @@
+require("gamemodes/4_paladins")
 
+
+--[[
+
+8_paladins has same gamemode rules as 4_paladins. Not really sure why it was made as a separate file...
+Leaving legacy code for the fun I guess..
 
 TYPE_VOTES = {}
 
@@ -406,3 +412,4 @@ function parseNewPos(killedTeam, parseTeam)
 		end
 	end	
 end
+]]
