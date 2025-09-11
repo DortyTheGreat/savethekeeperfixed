@@ -48,6 +48,7 @@ function init_long_wavemode()
 	CREEP_COST_MULT = 1.5             -- Множитель стоимости крипов
 	INCOME_DELAY = 30.0				-- время между получением дохода.
 	BONUS_FOOD = 5
+	WAVEMODE = "LONG"
 	--[[
 	Timers:CreateTimer(10.0,function()
 		for playerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do

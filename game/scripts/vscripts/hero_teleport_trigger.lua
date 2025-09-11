@@ -50,7 +50,9 @@ isTouched = false
 function OnEndTouch(trigger)
 	
 	--DeepPrintTable(trigger)
-	
+	if WAVEMODE == "LONG" then
+		return nil
+	end
 	
 	local unit = Entities:FindByName( nil, "player_spawn_" .. trigger.activator:GetTeam())
 	local unitpoint = unit:GetAbsOrigin()
