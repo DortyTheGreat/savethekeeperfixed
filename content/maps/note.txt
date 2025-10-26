@@ -1,0 +1,7 @@
+1_paladin.vmap 
+4_paladins.vmap
+
+these maps are mock maps, used to trick hammer to use old maps,
+decompiling and getting the proper .vmap files seems to be hard, 
+want to hope that Primo will give the .vmap files someday,
+since I don't want to remap everything

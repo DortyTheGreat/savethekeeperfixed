@@ -1,0 +1,8 @@
+1_paladin
+{
+	material materials/overviews/1_paladin.vmat
+	pos_x -5120
+	pos_y 5120
+	scale 10.000
+}
+

@@ -4207,8 +4207,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"      "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"         "290"      // Damage range min.
-		"AttackDamageMax"         "310"      // Damage range max.
+		"AttackDamageMin"         "300"      // Damage range min.
+		"AttackDamageMax"         "350"      // Damage range max.
 		"AttackRate"            "1.3"      // Speed of attack.
 		"AttackAnimationPoint"      "0.4"      // Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"   "1200"      // Range within a target can be acquired.
@@ -4287,10 +4287,6 @@
 				"Wearable6" { "ItemDef" "6506" }
 				"Wearable7" { "ItemDef" "6507" }
 			}	
-			"EquippedItems"
-			{
-				"Aghanim's Scepter"    {    "Item"    "item_ultimate_scepter"    }
-			}
 		}
 	}
 

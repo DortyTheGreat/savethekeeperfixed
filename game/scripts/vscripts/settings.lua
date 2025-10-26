@@ -108,8 +108,11 @@ ENABLED_RUNES[DOTA_RUNE_ARCANE] = true
 USE_CUSTOM_TEAM_COLORS = true           -- Should we use custom team colors?
 USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
 
-
-if GetMapName() == "8_paladins" or IsInToolsMode() then
+if GetMapName() == "1_paladin" then
+	MAX_NUMBER_OF_TEAMS = 1                 -- How many potential teams can be in this game mode?
+	MAX_NUMBER_OF_PLAYERS = 1
+	DISABLE_FOG_OF_WAR_ENTIRELY = true     -- Should we disable fog of war entirely for both teams?
+elseif GetMapName() == "8_paladins" or IsInToolsMode() then
 	MAX_NUMBER_OF_TEAMS = 8                 -- How many potential teams can be in this game mode?
 	MAX_NUMBER_OF_PLAYERS = 8
 	DISABLE_FOG_OF_WAR_ENTIRELY = true     -- Should we disable fog of war entirely for both teams?
