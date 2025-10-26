@@ -2529,7 +2529,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"               "40"      // Experience earn.
+		"BountyXP"               "35"      // Experience earn.
 		"BountyGoldMin"            "30"      // Gold earned min.
 		"BountyGoldMax"            "34"      // Gold earned max.
 
@@ -4180,7 +4180,7 @@
 		
 		// CLASSESS
 		"UnitClass"				"#boss_unit_doom"
-		"UnitCost"				"7000"
+		"UnitCost"				"6500"
 		"UnitIncome"			"14"
 		"UnitPage"				"6"
 		"AncientUnit"			"1"

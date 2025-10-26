@@ -3,6 +3,7 @@ require('internal/util')
 require('gamemode')
 require('stk_api')
 require('arc_warden_hotfix')
+require('stk_keeper_immovable_hotfix')
 require('db_server')
 -- lib function, wrap it into some file later
 function CDOTA_PlayerResource:GetPlayerIDs()
