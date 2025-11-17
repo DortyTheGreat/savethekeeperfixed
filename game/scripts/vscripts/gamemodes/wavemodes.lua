@@ -17,6 +17,7 @@ function init_classic_legacy_wavemode()
 	CREEP_COST_MULT = 1             -- Множитель стоимости крипов
 	INCOME_DELAY = 15.0			-- время между получением дохода.
 	BONUS_FOOD = 5
+	WAVEMODE = "LEGACY"
 end
 
 function init_classic_wavemode()
@@ -26,6 +27,7 @@ function init_classic_wavemode()
 	CREEP_COST_MULT = 1             -- Множитель стоимости крипов
 	INCOME_DELAY = 30.0			-- время между получением дохода.
 	BONUS_FOOD = 5
+	WAVEMODE = "CLASSIC"
 end
 
 
@@ -38,6 +40,7 @@ function init_fast_wavemode()
 	CREEP_COST_MULT = 1             -- Множитель стоимости крипов
 	INCOME_DELAY = 10.0				-- время между получением дохода.
 	BONUS_FOOD = 15					-- количество еды, даваемое за стадию (BONUS_FOOD умножается на GAME_STATE_NUMBER и прибавляется к текущему максимальному значению еды игрока).
+	WAVEMODE = "FAST"
 end
 
 

@@ -3,6 +3,8 @@
 TYPE_VOTES = {}
 
 function GameMode:InitGameMode()
+	GameRules:SetUseUniversalShopMode(true) -- this shouldn't be reapplied really... But for whatever the reason it has to???
+	print('SetUseUniversalShopMode TRUE')
 	--ListenToGameEvent("player_connect_full", Dynamic_Wrap(CDOTA_PlayerResource, "util_onPlayerConnect"), self)
 	ListenToGameEvent("player_reconnected", Dynamic_Wrap(CDOTA_PlayerResource, 'util_onPlayerReConnect'), self)
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
@@ -14,7 +16,7 @@ function GameMode:InitGameMode()
     print( "Loading AI Testing Game Mode." )
     -- SEEDING RNG IS VERY IMPORTANT
     math.randomseed(Time())
-
+	
     -- Set up a table to hold all the units we want to spawn
     GameMode.UnitThinkerList = {}
     GameRules:GetGameModeEntity():SetThink( "OnUnitThink", self, "UnitThink", 1 )
@@ -307,14 +309,16 @@ function PickCreepsUnderThreshold(threshold)
     return selected, total_cost
 end
 
-
+ENEMY_GOLD = 1000
 function GameMode:OnGameInProgress()
 
 	Timers:CreateTimer(0.1, function()
 		local allHeroes = HeroList:GetAllHeroes()
 		local processedOwnerIDs = {} -- this hotfixes meepo and other multieroed calls
 		
-		local picked_enemy, total = PickCreepsUnderThreshold(10000)
+		local picked_enemy, total = PickCreepsUnderThreshold(2000 + ENEMY_GOLD)
+		ENEMY_GOLD = ENEMY_GOLD * ( 1 + INCOME_COUNT / 300)
+		print('ENEMY_GOLD ' .. ENEMY_GOLD)
 		for _, name in ipairs(picked_enemy) do
 			spawnOneCreep(name, Entities:FindByName( nil, "spawn_" .. 6):GetAbsOrigin(), Entities:FindByName( nil, "point_" .. 6), 6)
 		end
@@ -438,7 +442,7 @@ function GameMode:OnEntityKilled( keys )
 		if canrespawn == 1 then
 			GameRules:SetGameWinner(killerEntity:GetTeam())
 			if not GameRules:IsCheatMode() then 
-				SendToServer(killerEntity:GetTeam())
+				--SendToServer(killerEntity:GetTeam())
 			else
 				print('[SUPABASE] sending data to server can only occur without cheats')
 			end

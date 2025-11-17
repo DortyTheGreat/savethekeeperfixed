@@ -4,6 +4,11 @@ local SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 dkjson = require ("dkjson")
 
 function SendToServer(WinnerTeam)
+
+    if GetMapName() == "1_paladin" then return end  
+    if GameRules:IsCheatMode() then return end  
+    if not IsServer() then return end    
+
     print('saving data to server...')
     local data = {
         winner = WinnerTeam,
